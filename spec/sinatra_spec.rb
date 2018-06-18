@@ -16,4 +16,10 @@ describe 'The HelloWorld App' do
     expect(last_response).to be_ok
     expect(last_response.body).to eq('Hello, World')
   end
+
+  it "says a little about me" do
+    get '/about'
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq('A little about me.')
+  end
 end
